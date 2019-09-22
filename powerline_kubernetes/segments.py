@@ -79,10 +79,10 @@ class KubernetesSegment(Segment):
         self.alerts = alerts
 
         config_locations_list = kubeconfig_location.split(ENV_KUBECONFIG_PATH_SEPARATOR)
-        if next(os.path.exists(e) for e in config_locations_list):
+        existing_configs = list(filter(lambda e: os.path.exists(e), config_locations_list))
+        if existing_configs:
             try:
-                loc = next(iter(config_locations_list))
-                contexts, current_context = list_kube_config_contexts(config_file=loc)
+                contexts, current_context = list_kube_config_contexts(config_file=kubeconfig_location)
                 ctx = current_context['context']
                 context = current_context['name']
                 namespace = ctx['namespace'] if 'namespace' in ctx else 'default'
