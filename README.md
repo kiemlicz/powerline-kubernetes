@@ -1,15 +1,14 @@
 Originally forked and inspired by https://github.com/so0k/powerline-kubernetes
 
 # Powerline Kubernetes
-
 A [Powerline](https://github.com/powerline/powerline) segment to show the current Kubernetes context.
 
 ## Requirements
+PIP packages:  
  - kubectl 
  - [kubernetes Python API](https://pypi.org/project/kubernetes/).
 
 ## Installation
-
 Installing the Kubernetes segment can be done with `pip`:
 
 ```
