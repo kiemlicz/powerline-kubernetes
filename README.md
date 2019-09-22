@@ -6,7 +6,6 @@ A [Powerline](https://github.com/powerline/powerline) segment to show the curren
 
 ## Requirements  
 
-PIP packages:  
  - kubectl 
  - [kubernetes Python API](https://pypi.org/project/kubernetes/).
 
