@@ -41,7 +41,7 @@ class KubernetesSegment(Segment):
                     segments.append(self.kube_logo(color))
 
                 segments.append({
-                    'contents': namespace,
+                    'contents': " ({})".format(namespace),
                     'highlight_groups': [color],
                     'divider_highlight_group': 'kubernetes:divider'
                 })
