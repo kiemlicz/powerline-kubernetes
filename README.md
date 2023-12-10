@@ -20,6 +20,16 @@ $ pwd
 $ pip3 install -e .
 ```
 
+If you distribution doesn't allow for 'global' pip installation then modify `config.json`, typically: `.config/powerline/config.json`
+```
+{
+    "common": {
+        "paths": ["~/your/location/powerline-kubernetes"]
+    }
+}
+```
+
+
 The Kubernetes segment uses a couple of custom highlight groups. You'll need to define those groups in your colorscheme, for example in `.config/powerline/colorschemes/default.json`:
 
 ```json
